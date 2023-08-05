@@ -1,0 +1,33 @@
+
+$ aws s3 mb s3://mybucket || To create a new bucket || make_bucket: mybucket
+
+$ aws s3 mb s3://mybucket --region ap-south-1 || To Create New S3 Bucket – in specific Region ||  make_bucket: mybucket
+
+$ aws s3 rb s3://tgsbucket || To remove a bucket  || remove_bucket: mybucket || It will work when bucket is empty
+
+$ aws s3 rb s3://tgsbucket --force || To remove a bucket which contains objects || we are removing forcefully
+
+$ aws s3 ls or aws s3 ls s3:// || To list all the s3 buckets
+
+$ aws s3 ls s3://mybucket || To list all the objects within bucket 'mybucket'
+
+$ aws s3 ls s3://tgsbucket --recursive  --human-readable --summarize || to display total size of all objects in a S3 Bucket
+
+$ aws s3 cp abhidata.txt s3://mybucket || To copy local file to S3 bucket
+
+$ aws s3 cp abhidata.txt s3://tgsbucket/abhidata-new.txt || If you want to copy the abhidata.txt to a S3 bucket with a different name
+
+$ aws s3 cp s3://mybucket/abhidata.txt . || To download a specific file from an S3 bucket.
+
+$ aws s3 cp s3://mybucket/ . --recursive || Download All Files Recursively from a S3 Bucket (Using Copy)
+
+$ aws s3 cp s3://mybucket/config/test.xml s3://backup-bucket || Copy a File from One Bucket to Another Bucket
+
+$ aws s3 cp s3://mybucket s3://backup-bucket --recursive || Copy All Files Recursively from One Bucket to Another
+
+$ aws s3 mv test.json s3://mybucket || Move a File from Local to S3 Bucket
+
+$ aws s3 ls s3://mybucket/abhidata.txt || Move a File from S3 Bucket to Local
+
+https://www.thegeekstuff.com/2019/04/aws-s3-cli-examples/
+
